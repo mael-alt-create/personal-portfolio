@@ -28,7 +28,7 @@ personal-portfolio/
 ├── README.md
 └── images/
     ├── background.jpeg # About section photo
-    └── myCV.docx       # Downloadable CV
+    └── mael-hounkpatin-cv.pdf  # Downloadable CV
 ```
 
 ---
