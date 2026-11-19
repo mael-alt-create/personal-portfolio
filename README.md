@@ -52,8 +52,8 @@ Open `index.html` in a browser, or serve the folder with any static server.
 
 ## Deployment
 
-Hosted on **Cloudflare Pages**, connected to this repository: every push to `main` redeploys the site.
-Build settings: framework preset *None*, no build command, output directory `/`.
+Hosted on **Cloudflare Workers** (static assets), connected to this repository: every push to `main` redeploys the site.
+Config lives in `wrangler.jsonc`; files excluded from the site are listed in `.assetsignore`.
 
 ---
 
