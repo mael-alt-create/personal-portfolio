@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal portfolio of Mael Hounkpatin — UI/UX Designer & Web Developer based in Benin.">
-    <title>Mael Hounkpatin — Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="Personal portfolio of Maël Hounkpatin — student at Epitech Bénin, interested in AI engineering, prompting and web development.">
+      <title>Maël Hounkpatin — Portfolio</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
-  <!-- ----------header---------- -->
   <div id="header">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
       <div class="container">
           <nav>
-              <img src="images/logo.jpg" class="logo" alt="Mael Hounkpatin logo">
+              <a href="#header" class="logo">Maël<span>.</span></a>
               <ul id="sidemenu">
-                   <li><a href="#header">Home</a></li>
-                   <li><a href="#about">About</a></li>
-                   <li><a href="#services">Services</a></li>
-                   <li><a href="#portfolio">Portfolio</a></li>
-                   <li><a href="#contact">Contact</a></li>
-                   <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                  <li><a href="#header">Home</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#services">Services</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                  <i class="fa-solid fa-xmark" onclick="closemenu()" aria-label="Close menu"></i>
               </ul>
-              <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+              <i class="fa-solid fa-bars" onclick="openmenu()" aria-label="Open menu"></i>
           </nav>
           <div class="header-text">
-              <p>UI/UX Designer &amp; Web Developer</p>
-              <h1>Hi, I'm <span>Mael</span><br>Hounkpatin From Benin</h1>
+              <p class="reveal">AI Engineering · Prompting · Web Development</p>
+              <h1 class="reveal">Hi, I'm <span>Maël</span><br>Hounkpatin From Benin</h1>
+              <a href="#projects" class="btn btn2 reveal hero-cta">View my projects</a>
           </div>
       </div>
+      <a href="#about" class="scroll-hint" aria-label="Scroll down"><span></span></a>
   </div>
-
   <!-- ----------about---------- -->
   <div id="about">
       <div class="container">
           <div class="row">
-              <div class="about-col-1">
-                  <img src="images/background.jpeg" alt="Mael Hounkpatin">
+              <div class="about-col-1 reveal">
+                  <div class="tilt photo-frame">
+                    <img src="images/background.jpeg" alt="Maël Hounkpatin">
+                  </div>
               </div>
-              <div class="about-col-2">
+              <div class="about-col-2 reveal">
                   <h1 class="sub-title">About Me</h1>
-                  <p>I was a student at Lancaster University Ghana. I continued the rest of my studies at Epitech Benin. Above all, what I'm passionate about is AI. I specialized in this field, but I also enjoyed designing websites for fun.</p>
+                  <p>I'm a Bachelor of Technology and IT student at Epitech Bénin, after a Foundation Program in Computer Science at Lancaster University Ghana. Through the projects I led this year, from Node.js backends to CI/CD pipelines, I built solid skills in programming and teamwork. I'm especially interested in AI engineering, from prompt engineering to building AI-powered tools, and in web development, where I enjoy bringing those ideas to life in clean, interactive interfaces.</p>
 
                   <div class="tab-titles">
-                      <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                      <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                      <p class="tab-links" onclick="opentab('education')">Education</p>
+                      <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                      <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                      <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                   </div>
-
                   <div class="tab-contents active-tab" id="skills">
                     <ul>
-                      <li><span>UI/UX Design</span><br>Designing Web &amp; App interfaces</li>
-                      <li><span>Web Development</span><br>Building responsive web applications</li>
-                      <li><span>App Development</span><br>Building Android &amp; iOS apps</li>
-                      <li><span>AI &amp; Machine Learning</span><br>Exploring intelligent systems</li>
+                      <li><span>Programming</span><br>C, JavaScript, TypeScript, Python</li>
+                      <li><span>Web</span><br>HTML, CSS, Node.js, Express.js, Docker, CI/CD</li>
+                      <li><span>Tools</span><br>Git &amp; GitHub, Microsoft Office</li>
+                      <li><span>Languages</span><br>French (native), English (intermediate)</li>
                     </ul>
                   </div>
-
                   <div class="tab-contents" id="experience">
                     <ul>
-                      <li><span>2023 – Present</span><br>Freelance Web Designer — Remote<br>Designing and developing responsive portfolio &amp; landing page websites for clients.</li>
-                      <li><span>2022 – 2023</span><br>UI/UX Intern — Lancaster University Ghana<br>Assisted in designing user interfaces for internal university digital tools.</li>
-                      <li><span>2021 – 2022</span><br>Junior Web Developer — Personal Projects<br>Built and deployed multiple personal projects using HTML, CSS &amp; JavaScript.</li>
+                      <li><span>Epitech Bénin</span><br>Epytodo (Node.js/Express backend) and Chocolatine (CI/CD automation)</li>
+                      <li><span>Lancaster University</span><br>Group chatbot with Python &amp; Flask, personal portfolio</li>
+                      <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
                     </ul>
                   </div>
-
                   <div class="tab-contents" id="education">
                     <ul>
-                      <li><span>2023 – 2025</span><br>Foundation Program — Lancaster University, Ghana<br>HTML, CSS and JavaScript.</li>
-                      <li><span>2021 – 2023</span><br>BSc Computer Science — Epitech Bénin<br>Foundation studies in software engineering and web development.</li>
+                      <li><span>Current</span><br>Bachelor of Technology &amp; IT — Epitech Bénin, Cotonou</li>
+                      <li><span>Jan 2024 – Jun 2025</span><br>Foundation Program in Computer Science — Lancaster University Ghana</li>
+                      <li><span>Sep 2023 – Dec 2024</span><br>English Proficiency Program — Lancaster University Ghana</li>
+                      <li><span>2023</span><br>Baccalauréat — Collège Sainte Bakhita</li>
                     </ul>
                   </div>
               </div>
           </div>
       </div>
   </div>
-
   <!-- ----------services---------- -->
   <div id="services">
       <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title reveal">My Services</h1>
         <div class="services-list">
-            <div>
+            <div class="reveal tilt">
               <i class="fa-solid fa-code"></i>
               <h2>Web Design</h2>
               <p>I design and develop fast, modern, and accessible websites tailored to your brand. From landing pages to multi-page sites, every project is built with clean code and a sharp eye for detail.</p>
               <a href="#contact">Get in touch</a>
             </div>
-            <div>
+            <div class="reveal tilt">
               <i class="fa-solid fa-crop"></i>
               <h2>UI/UX Design</h2>
               <p>I craft intuitive and engaging user experiences through research-driven design. My process focuses on usability, visual clarity, and creating seamless flows that convert visitors into users.</p>
               <a href="#contact">Get in touch</a>
             </div>
-            <div>
+            <div class="reveal tilt">
               <i class="fa-brands fa-app-store"></i>
               <h2>App Design</h2>
               <p>I design polished mobile interfaces for Android and iOS that feel native and natural. From wireframes to high-fidelity prototypes, I turn your app idea into a compelling product.</p>
@@ -104,46 +107,81 @@
         </div>
       </div>
   </div>
-
-  <!-- ----------portfolio---------- -->
-   <div id="portfolio">
+  <!-- ----------projects---------- -->
+  <div id="projects">
     <div class="container">
-      <h1 class="sub-title">My Work</h1>
-      <div class="work-list">
-        <div class="work">
-          <img src="images/work1.jpg" alt="Tech Essentials project">
-          <div class="layer">
-            <h3>Tech Essentials</h3>
-            <p>A bold red background to highlight everyday tech tools and accessories in a clean grid layout. Focused on composition and visual rhythm.</p>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-        <div class="work">
-          <img src="images/work2.jpg" alt="Minimal Desk Setup project">
-          <div class="layer">
-            <h3>Minimal Desk Setup</h3>
-            <p>A soft and cozy workspace design showing a smartphone on a stand. This layout reflects minimalism, balance, and focus on the product.</p>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
-        <div class="work">
-          <img src="images/work3.jpg" alt="Yellow Grid project">
-          <div class="layer">
-            <h3>Yellow Grid</h3>
-            <p>A vibrant yellow background with neatly arranged smart gadgets. Emphasizes product variety through bold color contrast and tight composition.</p>
-            <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-          </div>
-        </div>
+      <h1 class="sub-title reveal">Projects</h1>
+      <p class="section-lead reveal">What I built during my first year at Epitech and at Lancaster University.</p>
+
+      <div class="filters reveal" role="tablist">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="epitech">Epitech</button>
+        <button class="filter" data-filter="lancaster">Lancaster</button>
       </div>
-      <a href="#" class="btn">See more</a>
+
+      <div class="project-list">
+        <article class="project tilt reveal" data-school="lancaster">
+          <div class="project-glare"></div>
+          <div class="project-head">
+            <i class="fa-solid fa-robot"></i>
+            <span class="project-tag">Lancaster · 2024</span>
+          </div>
+          <h3>Chatbot (Group Project)</h3>
+          <p>Designed and built a chatbot with Python and Flask in a team of 4, simulating a real-world development workflow. Worked on API integration and debugging.</p>
+          <ul class="chips"><li>Python</li><li>Flask</li><li>APIs</li><li>Teamwork</li></ul>
+        </article>
+
+        <article class="project tilt reveal" data-school="epitech">
+          <div class="project-glare"></div>
+          <div class="project-head">
+            <i class="fa-solid fa-list-check"></i>
+            <span class="project-tag">Epitech · Year 1</span>
+          </div>
+          <h3>Epytodo</h3>
+          <p>Backend of a task-management application built with Node.js and Express: REST API, user authentication and a database for todos.</p>
+          <ul class="chips"><li>Node.js</li><li>Express</li><li>REST API</li></ul>
+        </article>
+
+        <article class="project tilt reveal" data-school="epitech">
+          <div class="project-glare"></div>
+          <div class="project-head">
+            <i class="fa-solid fa-gears"></i>
+            <span class="project-tag">Epitech · Year 1</span>
+          </div>
+          <h3>Chocolatine</h3>
+          <p>Set up and automated a CI/CD environment with DevOps tools: pipelines that build, check and test the code on every push.</p>
+          <ul class="chips"><li>CI/CD</li><li>GitHub Actions</li><li>Docker</li></ul>
+        </article>
+
+        <article class="project tilt reveal" data-school="epitech">
+          <div class="project-glare"></div>
+          <div class="project-head">
+            <i class="fa-solid fa-terminal"></i>
+            <span class="project-tag">Epitech · Year 1</span>
+          </div>
+          <h3>Minishell</h3>
+          <p>A Unix command interpreter in C: parsing the prompt, finding binaries in the PATH, running them with fork/execve and handling builtins like cd, env and exit.</p>
+          <ul class="chips"><li>C</li><li>Unix</li><li>Processes</li></ul>
+        </article>
+
+        <article class="project tilt reveal" data-school="lancaster">
+          <div class="project-glare"></div>
+          <div class="project-head">
+            <i class="fa-solid fa-laptop-code"></i>
+            <span class="project-tag">Lancaster</span>
+          </div>
+          <h3>Personal Portfolio</h3>
+          <p>Designed and developed a personal web portfolio: front-end development and presentation of digital content.</p>
+          <ul class="chips"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+        </article>
+      </div>
     </div>
    </div>
-
    <!-- ----------contact---------- -->
     <div id="contact">
         <div class="container">
             <div class="row">
-                <div class="contact-left">
+                <div class="contact-left reveal">
                     <h1 class="sub-title">Contact Me</h1>
                     <p><i class="fa-solid fa-paper-plane"></i> maelhounkpatin8@gmail.com</p>
                     <p><i class="fa-solid fa-phone"></i> +229 053 878 7508</p>
@@ -154,69 +192,227 @@
                         <a href="https://snapchat.com" target="_blank" rel="noopener" aria-label="Snapchat"><i class="fa-brands fa-snapchat"></i></a>
                     </div>
                     <a href="images/myCV.docx" download class="btn btn2">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
-                </div>
-            </div>
+          </div>
+          <div class="contact-right reveal">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
         </div>
-        <div class="copyright">
-            <p>&copy; 2025 Mael Hounkpatin <i class="fa-solid fa-heart"></i> All rights reserved.</p>
-        </div>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2025 Mael Hounkpatin <i class="fa-solid fa-heart"></i> All rights reserved.</p>
+      </div>
     </div>
 
   <script>
-    // ---- Tab system ----
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname) {
-      for (var tablink of tablinks) {
-        tablink.classList.remove("active-link");
-      }
-      for (var tabcontent of tabcontents) {
-        tabcontent.classList.remove("active-tab");
-      }
-      event.currentTarget.classList.add("active-link");
+    // ---------- About tabs ----------
+    function opentab(e, tabname){
+      document.querySelectorAll(".tab-links").forEach(t => t.classList.remove("active-link"));
+      document.querySelectorAll(".tab-contents").forEach(t => t.classList.remove("active-tab"));
+      e.currentTarget.classList.add("active-link");
       document.getElementById(tabname).classList.add("active-tab");
     }
 
-    // ---- Mobile nav menu ----
-    var sidemenu = document.getElementById("sidemenu");
+    // ---------- Mobile nav menu ----------
+    const sidemenu = document.getElementById("sidemenu");
+    function openmenu(){ sidemenu.classList.add("open"); }
+    function closemenu(){ sidemenu.classList.remove("open"); }
+    sidemenu.querySelectorAll("a").forEach(a => a.addEventListener("click", closemenu));
 
-    function openmenu() {
-      sidemenu.style.right = "0";
+    // ---------- Project filters ----------
+    document.querySelectorAll(".filter").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll(".filter").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const f = btn.dataset.filter;
+        document.querySelectorAll(".project").forEach(p => {
+          const show = f === "all" || p.dataset.school === f;
+          p.classList.toggle("hidden", !show);
+        });
+      });
+    });
+
+    // ---------- Scroll reveal (3D flip-in) ----------
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => {
+        if (en.isIntersecting) {
+          const el = en.target;
+          el.classList.add("in");
+          io.unobserve(el);
+          setTimeout(() => { el.style.transitionDelay = ""; }, 1100);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll(".reveal").forEach((el, i) => {
+      el.style.transitionDelay = (i % 3) * 90 + "ms";
+      io.observe(el);
+    });
+
+    // ---------- 3D tilt on hover ----------
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const finePointer = window.matchMedia("(pointer: fine)").matches;
+    if (!reduceMotion && finePointer) {
+      document.querySelectorAll(".tilt").forEach(card => {
+        card.addEventListener("mousemove", e => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(900px) rotateX(${-y * 14}deg) rotateY(${x * 14}deg) translateZ(10px)`;
+          card.style.setProperty("--gx", (x + 0.5) * 100 + "%");
+          card.style.setProperty("--gy", (y + 0.5) * 100 + "%");
+        });
+        card.addEventListener("mouseleave", () => { card.style.transform = ""; });
+      });
     }
-    function closemenu() {
-      sidemenu.style.right = "-200px";
+  </script>
+
+  <!-- ---------- Hero 3D scene ---------- -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script>
+  (function(){
+    if (typeof THREE === "undefined") return;
+    const canvas = document.getElementById("hero-canvas");
+    const header = document.getElementById("header");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 100);
+    camera.position.set(0, 0, 9);
+
+    // Main object: faceted icosahedron + wireframe shell
+    const group = new THREE.Group();
+    scene.add(group);
+
+    const core = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(1.7, 1),
+      new THREE.MeshStandardMaterial({ color: 0x1a1a1a, metalness: 0.7, roughness: 0.25, flatShading: true })
+    );
+    group.add(core);
+
+    const shell = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(2.3, 1),
+      new THREE.MeshBasicMaterial({ color: 0xff004f, wireframe: true, transparent: true, opacity: 0.55 })
+    );
+    group.add(shell);
+
+    const ring = new THREE.Mesh(
+      new THREE.TorusGeometry(3.2, 0.025, 8, 160),
+      new THREE.MeshBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.35 })
+    );
+    ring.rotation.x = Math.PI / 2.4;
+    group.add(ring);
+
+    // Orbiting small cubes
+    const orbiters = [];
+    for (let i = 0; i < 6; i++) {
+      const m = new THREE.Mesh(
+        new THREE.BoxGeometry(0.22, 0.22, 0.22),
+        new THREE.MeshStandardMaterial({ color: i % 2 ? 0xff004f : 0xffffff, metalness: 0.5, roughness: 0.3 })
+      );
+      m.userData = { a: (i / 6) * Math.PI * 2, r: 3.2, s: 0.35 + Math.random() * 0.2 };
+      group.add(m);
+      orbiters.push(m);
     }
+
+    // Particle field
+    const N = 900;
+    const pos = new Float32Array(N * 3);
+    for (let i = 0; i < N; i++) {
+      pos[i*3]   = (Math.random() - 0.5) * 40;
+      pos[i*3+1] = (Math.random() - 0.5) * 24;
+      pos[i*3+2] = (Math.random() - 0.5) * 30 - 5;
+    }
+    const pGeo = new THREE.BufferGeometry();
+    pGeo.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+    const particles = new THREE.Points(pGeo, new THREE.PointsMaterial({ color: 0xff4d7f, size: 0.05, transparent: true, opacity: 0.8 }));
+    scene.add(particles);
+
+    // Lights
+    scene.add(new THREE.AmbientLight(0xffffff, 0.35));
+    const l1 = new THREE.PointLight(0xff004f, 2.2, 30); l1.position.set(5, 3, 5); scene.add(l1);
+    const l2 = new THREE.PointLight(0x4d7fff, 1.2, 30); l2.position.set(-5, -3, 4); scene.add(l2);
+
+    function resize(){
+      const w = header.clientWidth, h = header.clientHeight;
+      renderer.setSize(w, h, false);
+      camera.aspect = w / h;
+      camera.updateProjectionMatrix();
+      // push object to the right on wide screens, center & shrink on mobile
+      const wide = w > 900;
+      group.position.x = wide ? 3.6 : 0;
+      group.position.y = wide ? -0.2 : -1.6;
+      group.scale.setScalar(wide ? 1 : 0.7);
+    }
+    window.addEventListener("resize", resize);
+    resize();
+
+    let mx = 0, my = 0;
+    window.addEventListener("pointermove", e => {
+      mx = (e.clientX / window.innerWidth) - 0.5;
+      my = (e.clientY / window.innerHeight) - 0.5;
+    });
+
+    let visible = true;
+    new IntersectionObserver(([en]) => { visible = en.isIntersecting; }).observe(header);
+
+    const clock = new THREE.Clock();
+    function tick(){
+      requestAnimationFrame(tick);
+      if (!visible) return;
+      const t = reduce ? 0 : clock.getElapsedTime();
+      const scrollF = Math.min(window.scrollY / window.innerHeight, 1);
+
+      core.rotation.x = t * 0.25;
+      core.rotation.y = t * 0.35;
+      shell.rotation.x = -t * 0.15;
+      shell.rotation.y = -t * 0.2;
+      ring.rotation.z = t * 0.3;
+      orbiters.forEach(o => {
+        const a = o.userData.a + t * o.userData.s;
+        o.position.set(Math.cos(a) * o.userData.r, Math.sin(a * 2) * 0.4, Math.sin(a) * o.userData.r);
+        o.rotation.x = o.rotation.y = t;
+      });
+      particles.rotation.y = t * 0.02;
+
+      // mouse parallax + scroll push
+      group.rotation.y += ((mx * 0.8) - group.rotation.y) * 0.05;
+      group.rotation.x += ((my * 0.5 + scrollF * 0.8) - group.rotation.x) * 0.05;
+      camera.position.x += (mx * 1.2 - camera.position.x) * 0.04;
+      camera.position.y += (-my * 0.8 - camera.position.y) * 0.04;
+      camera.position.z = 9 + scrollF * 4;
+      camera.lookAt(0, 0, 0);
+
+      renderer.render(scene, camera);
+    }
+    tick();
+  })();
   </script>
 
   <script>
-    // ---- Contact form → Google Sheet ----
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbyLiKc-oLjow2mR-88ZI1pYHdEivRQWn-wxKeIubKcljQ46aU-c7CKROtncFWuhJWw/exec';
-    const form = document.forms['submit-to-google-sheet'];
-    const msg = document.getElementById("msg");
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbyLiKc-oLjow2mR-88ZI1pYHdEivRQWn-wxKeIubKcljQ46aU-c7CKROtncFWuhJWw/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
 
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-        .then(response => {
-          msg.innerHTML = "Message sent successfully ✓";
-          setTimeout(function () {
-            msg.innerHTML = "";
-          }, 5000);
-          form.reset();
-        })
-        .catch(error => console.error('Error!', error.message));
-    });
-  </script>
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 
   </body>
 </html>

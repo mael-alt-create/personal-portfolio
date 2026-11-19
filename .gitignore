@@ -1,0 +1,9 @@
+# Local preview tooling (not part of the site)
+.claude/
+
+# OS / editor files
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+~$*
