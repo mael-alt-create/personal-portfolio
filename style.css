@@ -335,6 +335,13 @@ nav ul .fa-xmark{
 .contact-left .sub-title + p{
   margin-top: 30%;
 }
+.contact-left p a{
+  color: inherit;
+  text-decoration: none;
+}
+.contact-left p a:hover{
+  color: #ff004f;
+}
 .contact-left p i{
   color: #ff004f;
   margin-right: 15px;
