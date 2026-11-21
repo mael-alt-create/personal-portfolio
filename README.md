@@ -52,8 +52,8 @@ Open `index.html` in a browser, or serve the folder with any static server.
 
 ## Deployment
 
-Hosted on **Cloudflare Workers** (static assets), connected to this repository: every push to `main` redeploys the site.
-Config lives in `wrangler.jsonc`; files excluded from the site are listed in `.assetsignore`.
+Hosted on **Cloudflare Workers** (static assets) and **Vercel**, both connected to this repository: every push to `main` redeploys the site.
+Cloudflare config lives in `wrangler.jsonc` (excluded files in `.assetsignore`); Vercel excludes files listed in `.vercelignore`.
 
 ---
 
